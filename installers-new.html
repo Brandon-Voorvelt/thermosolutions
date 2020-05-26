@@ -1,0 +1,71 @@
+<!--
+    With the installers, maybe charge them R200 to be loaded onto our website
+    and put reviews of these installers onto the website as well. 
+    This will promote the installers and will bring in about R20000 per month for
+    other advertising for us.
+
+    Perhaps when a person clicks onto the contractor, their Google business page 
+    should pop up with their details and reviews
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head lang="en"> 
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166340902-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-166340902-1');
+</script>
+        <title>
+            Thermo-Solutions | Certified Installers
+        </title>
+        <!--Meta data-->
+        <meta charset="UTF-8"> <meta name="google-site-verification" content="google-site-verification=X5hODOMk8mxWpwe5WqlqplyTClrKG4AhQsfzZ5tumoY"> <meta name="copyright" content="This website is trademarked by Piccolo 222 Group (Pty) Ltd T/A Thermo-Solutions. Created by Brandon Voorvelt."> <meta name="robots" content="index, follow" /><meta name="googlebot" content="index, follow" /><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="author" content="Brandon Voorvelt"><meta name="description" content="Thermo-Solutions is a roof insulation manufacturing company based in the Western Cape that caters to the requirements of the local Southern African market with regards to the new law passed in December 2011 that requires that all new dwellings and structures to be fitted with roofing insulation. "> <meta name="keywords" content="Thermo,Solutions,Thermo Solutions,Thermo-Solutions,Roof,Roofing,Ceiling,Insulation,Insulator,Install,Installer,Supplier,Manufacturer,build,building,areolite,material,materials">
+        <!---End Meta data-------------------------->
+<link rel="Stylesheet" type="text/css" href="../exSheet/installers.css">
+<link rel="icon" href="../imgs/w_i2.ico" type="image/x-icon"> <!--Add Tab Icon-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://kit.fontawesome.com/07957b0560.js" crossorigin="anonymous"></script>
+<!--<script src="https://www.w3schools.com/lib/w3.js"></script>  -->
+
+</head>
+
+<body ng-app="installerApp"  ><main ng-controller="installerCtrl" >
+<!------------------------------This is for smaller screens / touch screens------------------------------------>
+  <div class="profile-container clearfix" ng-repeat="profile in profiles"> 
+      <img class="profile-logo" ng-src="{{profile.img}}"></img>
+      <div class="profile-name"> {{ profile.name }}</div>
+      <div class="profile-tel"> 
+                                <span class="profile-details"> {{ profile.tel }}</span>  
+      </div>
+      <div class="profile-email"> 
+                                  <span class="profile-details"> {{ profile.email }}</span>  
+      </div>
+      <div class="profile-email"> 
+                                  <span class="profile-details"> {{ profile.person }}</span>  
+</div>
+  </div>
+<!------------------------------This is for larger screens / non-touch screens------------------------------------>
+  <div class="flip-card" ng-repeat="profile in profiles">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <img ng-src="{{profile.img}}" alt="Avatar" style="width:27vw;height:100%; ">
+      </div>
+      <div class="flip-card-back">
+        <h1>{{profile.name}}</h1> 
+        <p>Contact Number: {{ profile.tel }}</p> 
+        <p>Email Address: {{ profile.email }}</p>
+        <p>Contact Person: {{profile.person}}</p>
+      </div>
+    </div>
+  </div>
+  <script src="../exSheet/installers.js">
+    
+  </script><!--Link javascript sheet-->
+</main>
+</body>
+</html>
